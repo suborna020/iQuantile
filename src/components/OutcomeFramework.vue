@@ -13,15 +13,6 @@
         >Which personnel will be in this program?</label
       >
 
-      <template
-        v-for="(data, index) in OutcomeFramework.personnel"
-        :key="index"
-      >
-        <span class="badge rounded-pill bg-light text-dark p-2 mt-2 px-3">
-          {{ data }}
-          <i class="fa-solid fa-xmark ms-1"></i>
-        </span>
-      </template>
       <div class="multiselect">
         <div class="" @click="showCheckboxes">
           <select class="form-select" aria-label="Default select example">
@@ -62,6 +53,15 @@
           >
         </div>
       </div>
+      <template
+        v-for="(data, index) in OutcomeFramework.personnel"
+        :key="index"
+      >
+        <span class="badge rounded-pill bg-light text-dark p-2 mt-2 px-3">
+          {{ data }}
+          <i class="fa-solid fa-xmark ms-1"></i>
+        </span>
+      </template>
     </div>
     <div class="mb-3">
       <div class="form-check">
